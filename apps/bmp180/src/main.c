@@ -44,11 +44,11 @@ int main(void) {
     return BMP180_STATUS_INIT_ERR;
   }
 
-  while (true){
-    if (bmp180_get_temperature(&dev, &data) == BMP180_STATUS_SUCCESS){
+  while (true) {
+    if (bmp180_get_temperature(&dev, &data) == BMP180_STATUS_SUCCESS) {
       printf("temperature: %.2f °C\r\n", data.temp);
     }
-    if (bmp180_get_pressure(&dev, &data) == BMP180_STATUS_SUCCESS){
+    if (bmp180_get_pressure(&dev, &data) == BMP180_STATUS_SUCCESS) {
       printf("pressure: %.3f atm\r\n", data.pressure_atm);
       printf("pressure: %d Pa\r\n", data.pressure_pa);
     }
